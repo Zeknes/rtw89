@@ -981,8 +981,7 @@ static int rtw89_usb_intf_init(struct rtw89_dev *rtwdev,
 		return ret;
 
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(7, 0, 0)
-	rtwusb->vendor_req_buf = kmalloc_obj(*rtwusb->vendor_req_buf,
-					     GFP_KERNEL);
+	rtwusb->vendor_req_buf = kmalloc_obj(*rtwusb->vendor_req_buf);
 #else
 	rtwusb->vendor_req_buf = kmalloc(sizeof(*rtwusb->vendor_req_buf),
 					 GFP_KERNEL);
