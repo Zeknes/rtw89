@@ -2010,7 +2010,7 @@ void rtw89_phy_init_rf_reg(struct rtw89_dev *rtwdev, bool noio)
 	u8 path;
 
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(7, 0, 0)
-	rf_reg_info = kzalloc_obj(*rf_reg_info, GFP_KERNEL);
+	rf_reg_info = kzalloc_obj(*rf_reg_info);
 #else
 	rf_reg_info = kzalloc(sizeof(*rf_reg_info), GFP_KERNEL);
 #endif

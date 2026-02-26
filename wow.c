@@ -1500,7 +1500,7 @@ static int rtw89_pno_scan_update_probe_req(struct rtw89_dev *rtwdev,
 		skb_put_data(skb, nd_config->ie, nd_config->ie_len);
 
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(7, 0, 0)
-		info = kzalloc_obj(*info, GFP_KERNEL);
+		info = kzalloc_obj(*info);
 #else
 		info = kzalloc(sizeof(*info), GFP_KERNEL);
 #endif

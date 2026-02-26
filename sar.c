@@ -502,7 +502,7 @@ static void rtw89_set_sar_from_acpi(struct rtw89_dev *rtwdev)
 	int ret;
 
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(7, 0, 0)
-	cfg = kzalloc_obj(*cfg, GFP_KERNEL);
+	cfg = kzalloc_obj(*cfg);
 #else
 	cfg = kzalloc(sizeof(*cfg), GFP_KERNEL);
 #endif

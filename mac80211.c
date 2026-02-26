@@ -1706,7 +1706,7 @@ int rtw89_ops_change_vif_links(struct ieee80211_hw *hw,
 
 	if (removing_links) {
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(7, 0, 0)
-		snap = kzalloc_obj(*snap, GFP_KERNEL);
+		snap = kzalloc_obj(*snap);
 #else
 		snap = kzalloc(sizeof(*snap), GFP_KERNEL);
 #endif

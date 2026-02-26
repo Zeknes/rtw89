@@ -4229,7 +4229,7 @@ int rtw89_core_send_nullfunc(struct rtw89_dev *rtwdev, struct rtw89_vif_link *rt
 		return 0;
 
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(7, 0, 0)
-	wait = kzalloc_obj(*wait, GFP_KERNEL);
+	wait = kzalloc_obj(*wait);
 #else
 	wait = kzalloc(sizeof(*wait), GFP_KERNEL);
 #endif
@@ -5683,7 +5683,7 @@ rtw89_wait_for_cond_prep(struct rtw89_wait_info *wait, unsigned int cond)
 		return ERR_PTR(-EPERM);
 
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(7, 0, 0)
-	prep = kzalloc_obj(*prep, GFP_KERNEL);
+	prep = kzalloc_obj(*prep);
 #else
 	prep = kzalloc(sizeof(*prep), GFP_KERNEL);
 #endif
