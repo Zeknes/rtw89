@@ -36,6 +36,8 @@ static const struct rtw89_driver_info rtw89_8852bu_info = {
 };
 
 static const struct usb_device_id rtw_8852bu_id_table[] = {
+	{ USB_DEVICE_AND_INTERFACE_INFO(0x04bb, 0x095b, 0xff, 0xff, 0xff),
+	  .driver_info = (kernel_ulong_t)&rtw89_8852bu_info },
 	{ USB_DEVICE_AND_INTERFACE_INFO(0x0bda, 0xb832, 0xff, 0xff, 0xff),
 	  .driver_info = (kernel_ulong_t)&rtw89_8852bu_info },
 	{ USB_DEVICE_AND_INTERFACE_INFO(0x0bda, 0xb83a, 0xff, 0xff, 0xff),
